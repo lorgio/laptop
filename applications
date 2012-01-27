@@ -17,3 +17,12 @@ echo "Installing CouchDB"
 	brew install couchdb
 	brew install couchdb-lucene
 	
+echo "Installing MacVim"
+  brew install macvim
+
+echo "Installling 1Password"
+  open "https://agilebits.com/downloads/1Password/Mac"
+
+echo "Installing Dropbox"
+  open "https://www.dropbox.com/downloading?src=index"
+
