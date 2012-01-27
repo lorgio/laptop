@@ -12,3 +12,8 @@ echo "Downloading Pomodoro"
 	unzip pomodoro-0.31.zip
 	mv pomodoro.app /Applications
 	rm pomodoro-0.31.zip
+
+echo "Installing CouchDB"
+	brew install couchdb
+	brew install couchdb-lucene
+	
