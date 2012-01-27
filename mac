@@ -1,18 +1,15 @@
 #!/usr/bin/env bash
 
-echo "Checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+# echo "Checking for SSH key, generating one if it doesn't exist ..."
+#   [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 
-echo "Copying public key to clipboard. Paste it into your Github account ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | pbcopy
-  open https://github.com/account/ssh
+# echo "Copying public key to clipboard. Paste it into your Github account ..."
+#   [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | pbcopy
+#   open https://github.com/account/ssh
 
 echo "Installing Homebrew, a good OS X package manager ..."
   ruby -e "$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)"
   brew update
-
-echo "Installing Postgres, a good open source relational database ..."
-  brew install postgres --no-python
 
 echo "Installing Redis, a good key-value database ..."
   brew install redis
@@ -26,6 +23,15 @@ echo "Installing tmux, a good way to save project state and switch between proje
 echo "Installing ImageMagick, good for cropping and re-sizing images ..."
   brew install imagemagick
 
+echo "Installing freetds"
+	brew install freetds
+
+echo "Installing wget ..."
+	brew install wget
+	
+echo "Installing oh-my-zsh"
+	curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
 echo "Installing RVM (Ruby Version Manager) ..."
   curl -s https://rvm.beginrescueend.com/install/rvm -o rvm-installer ; chmod +x rvm-installer ; ./rvm-installer --version latest
   echo "
@@ -33,4 +39,14 @@ echo "Installing RVM (Ruby Version Manager) ..."
 [[ -s '/Users/`whoami`/.rvm/scripts/rvm' ]] && source '/Users/`whoami`/.rvm/scripts/rvm'" >> ~/.zshrc
   source ~/.zshrc
 
-bash < <(curl -s https://raw.github.com/thoughtbot/laptop/master/ruby)
+[[ -s '/Users/`whoami`/.rvm/scripts/rvm' ]] && source '/Users/`whoami`/.rvm/scripts/rvm'" >> ~/.profile
+  source ~/.profile
+
+echo "Installing Ruby"
+	bash < <(curl -s https://raw.github.com/lorgio/laptop/master/ruby)
+
+echo "Installing Applications"
+	bash < <(curl -s https://raw.github.com/lorgio/laptop/master/applications)
+
+echo "Installing code-repos"
+	bash < <(curl -s https://raw.github.com/lorgio/laptop/master/code-repos)

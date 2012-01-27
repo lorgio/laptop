@@ -1,0 +1,9 @@
+echo "Downloading tl-tools"
+	cd ~/Sites
+	git clone git@git.amexpub.com:travel-leisure/tl-tools.git
+	cd ~/
+	
+echo "Downloading travel-leisure"
+	cd ~/Sites
+	git clone git@git.amexpub.com:travel-leisure/travel-leisure.git
+	cd ~/
