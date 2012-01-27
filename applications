@@ -1,0 +1,14 @@
+echo "Installing SizeUp ..."
+	wget http://www.irradiatedsoftware.com/download/SizeUp.zip
+	unzip SizeUp.zip
+	mv SizeUp.app /Applications
+	rm SizeUp.zip
+
+echo "Opening up browser for Google Chrome"
+	open https://www.google.com/chrome/index.html?brand=CHMO&installdataindex=homepagepromo
+
+echo "Downloading Pomodoro"
+	wget http://pomodoro.ugolandini.com/pages/downloads_files/pomodoro-0.31.zip
+	unzip pomodoro-0.31.zip
+	mv pomodoro.app /Applications
+	rm pomodoro-0.31.zip
