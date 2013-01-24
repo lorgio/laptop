@@ -7,22 +7,71 @@ echo "Installing SizeUp ..."
 echo "Opening up browser for Google Chrome"
 	open https://www.google.com/chrome/index.html?brand=CHMO&installdataindex=homepagepromo
 
+echo "Opening up browser for Google Canary"
+	open https://www.google.com/intl/en/chrome/browser/canary.html
+
+
 echo "Downloading Pomodoro"
-	wget http://pomodoro.ugolandini.com/pages/downloads_files/pomodoro-0.31.zip
-	unzip pomodoro-0.31.zip
-	mv pomodoro.app /Applications
-	rm pomodoro-0.31.zip
+ /* wget http://pomodoro.ugolandini.com/pages/downloads_files/pomodoro-0.31.zip*/
+	/*unzip pomodoro-0.31.zip*/
+	/*mv pomodoro.app /Applications*/
+ /* r*/m pomodoro-0.31.zip
+open http://www.pomodoroapp.com/wp-content/plugins/download-monitor/download.php?id=3
+
+echo "Downloading Spirited Away"
+  open https://dl.dropbox.com/u/1025/spiritedaway/Spirited%20Away.zip
 
 echo "Installing CouchDB"
 	brew install couchdb
 	brew install couchdb-lucene
-	
+
+echo "Installing MONGO"
+  brew install mongoddb
+  sudo ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+
 echo "Installing MacVim"
   brew install macvim
+
+echo "Installing Janus"
+  curl -Lo- https://bit.ly/janus-bootstrap | bash
 
 echo "Installling 1Password"
   open "https://agilebits.com/downloads/1Password/Mac"
 
 echo "Installing Dropbox"
   open "https://www.dropbox.com/downloading?src=index"
+
+echo "Installing Omni Apps"
+  wget "http://www.omnigroup.com/download/latest/omnidazzle"
+  wget "http://www.omnigroup.com/download/latest/omnidisksweeper"
+
+echo "Installing TextMate"
+  open "http://macromates.com/textmate/files/TextMate.dmg"
+
+echo "Installing TextMate Bundles"
+  mkdir -p ~/Library/Application\ Support/TextMate/Bundles
+  cd ~/Library/Application\ Support/TextMate/Bundles
+  git clone git://github.com/protocool/AckMate.git "AckMate.tmplugin"
+  git clone git://github.com/drnic/ruby-on-rails-tmbundle.git "Ruby on Rails.tmbundle"
+  git clone git://github.com/mocoso/code-beautifier.tmbundle.git Code\ Beautifier.tmbundle
+  git clone git://github.com/cucumber/cucumber-tmbundle.git Cucumber.tmbundle
+  git clone git://github.com/handcrafted/handcrafted-haml-textmate-bundle.git HAML-Handcrafted.tmbundle
+  /*git clone git://github.com/jezdez/textmate-missingdrawer.git */
+  /*http://www.cocoabits.com/TmCodeBrowser/*/
+  wget http://www.cocoabits.com/TmCodeBrowser/TmCodeBrowser.dmg
+  open TmCodeBrowser.dmg
+  bash <(curl -s -L http://goo.gl/4RUoP)
+  /*wget http://alternateidea.com/blog/files/tm-vibrantink-theme-prototype-bundle.zip*/
+  wget http://textmatetheme.com/uploads/amazondownloads/26/original.zip
+  unzip unzip original.zip
+  open Vibrant\ Ink.tmTheme
+  osascript -e 'tell app "TextMate" to reload bundles'
+
+
+
+
+echo "Installing GitX"
+  open "https://github.com/downloads/brotherbard/gitx/GitX%20Nov-17-2010.zip"
+  mv ~/Downloads/GitX.app/ /Applications/
+
 

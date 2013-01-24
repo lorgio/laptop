@@ -8,7 +8,8 @@
 #   open https://github.com/account/ssh
 
 echo "Installing Homebrew, a good OS X package manager ..."
-  ruby -e "$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)"
+  ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+  brew doctor
   brew update
 
 echo "Installing Redis, a good key-value database ..."
@@ -28,7 +29,7 @@ echo "Installing freetds"
 
 echo "Installing wget ..."
 	brew install wget
-	
+
 echo "Installing oh-my-zsh"
 	curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
@@ -38,6 +39,7 @@ echo "Installing RBEnv ..."
 	echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 	exec $SHELL
 	brew install ruby-build
+
 
 echo "Installing Ruby"
 	bash < <(curl -s https://raw.github.com/lorgio/laptop/master/ruby)

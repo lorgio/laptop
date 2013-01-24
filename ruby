@@ -15,6 +15,10 @@ echo "Installing amex gems for deployment"
    gem install rails --no-rdoc --no-ri
    gem install rails --no-rdoc --no-ri --v 2.3.11
 
+# echo installing apps for testing
+  brew install qt
+  brew install node
+
 # echo "Installing the Taps gem to push and pull SQL databases between development, staging, and production environments ..."
 #   gem install taps --no-rdoc --no-ri
 
