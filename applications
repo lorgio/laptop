@@ -31,6 +31,10 @@ echo "Installing MONGO"
 
 echo "Installing MacVim"
   brew install macvim
+  brew install ctags
+  brew install qt
+  
+
 
 echo "Installing Janus"
   curl -Lo- https://bit.ly/janus-bootstrap | bash
