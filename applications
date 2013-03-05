@@ -60,6 +60,8 @@ echo "Installing TextMate Bundles"
   git clone git://github.com/mocoso/code-beautifier.tmbundle.git Code\ Beautifier.tmbundle
   git clone git://github.com/cucumber/cucumber-tmbundle.git Cucumber.tmbundle
   git clone git://github.com/handcrafted/handcrafted-haml-textmate-bundle.git HAML-Handcrafted.tmbundle
+  git clone git://github.com/jashkenas/coffee-script-tmbundle CoffeeScriptBundle.tmbundle
+  git clone git://github.com/textmate/json.tmbundle.git
   /*git clone git://github.com/jezdez/textmate-missingdrawer.git */
   /*http://www.cocoabits.com/TmCodeBrowser/*/
   wget http://www.cocoabits.com/TmCodeBrowser/TmCodeBrowser.dmg

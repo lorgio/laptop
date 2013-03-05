@@ -12,6 +12,9 @@ echo "Installing Homebrew, a good OS X package manager ..."
   brew doctor
   brew update
 
+echo "Installing Memcached...."
+ brew install memcached
+
 echo "Installing Redis, a good key-value database ..."
   brew install redis
 
