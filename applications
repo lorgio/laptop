@@ -9,7 +9,8 @@ echo "Opening up browser for Google Chrome"
 
 echo "Opening up browser for Google Canary"
 	open https://www.google.com/intl/en/chrome/browser/canary.html
-
+echo "installing Growl"
+open http://www.macupdate.com/download/41038/Growl-1.2.2f1.dmg
 
 echo "Downloading Pomodoro"
  /* wget http://pomodoro.ugolandini.com/pages/downloads_files/pomodoro-0.31.zip*/
@@ -33,7 +34,7 @@ echo "Installing MacVim"
   brew install macvim
   brew install ctags
   brew install qt
-  
+
 
 
 echo "Installing Janus"
