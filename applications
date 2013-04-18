@@ -75,10 +75,16 @@ echo "Installing TextMate Bundles"
   osascript -e 'tell app "TextMate" to reload bundles'
 
 
+echo "Installing SublimeText"
+  wget "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg"
+  open "Sublime%20Text%202.0.1.dmg"
 
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
 
 echo "Installing GitX"
   open "https://github.com/downloads/brotherbard/gitx/GitX%20Nov-17-2010.zip"
   mv ~/Downloads/GitX.app/ /Applications/
 
-
+echo "Installing FitBit"
+  open "http://www.fitbit.com/start/zip?platform=mac"
+  
